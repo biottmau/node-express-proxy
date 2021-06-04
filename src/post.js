@@ -3,10 +3,6 @@ const conf = require("../config/config");
 var mHttp = conf.proxy.http;
 
 module.exports = (req, response) => {
-  if (req.headers.host !== null) {
-    console.log("CAMBIO HOST EN HEADER " + req.headers.host);
-    req.headers.host = "mobile-api.quadminds.com";
-  }
   console.log("POST: " + req.url);
   console.log("POST: " + JSON.stringify(req.headers));
   var sData = JSON.stringify(JSON.parse(JSON.stringify(req.body)));
