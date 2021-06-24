@@ -6,7 +6,7 @@ const env = process.env.ENVIRON;
 
 const PORT = process.env.PORT;
 
-const mHttps = (process.env[env+".proxy.http"] == "http")?http:https;
+const mHttps = (process.env[env+".proxy.http"] === "http")?http:https;
 
 module.exports = {
   app: {
